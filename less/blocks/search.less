@@ -1,17 +1,32 @@
 .search {
   position: relative;
+  margin-right: 25px;
+  
+  &:hover {
+    .search__input {
+      opacity: 1;
+      height: 30px;
+      .transition();
+    }
+  }
 }
 
 .search__input {
+  display: block;
+  opacity: 0;
   position: absolute;
   top: 100%;
   right: 0;
-  height: 30px;
+  height: 0;
   width: 150px;
-  border: 1px solid #222222;
+  padding: 0 10px;
+  background-color: #fff;
+  border: 1px solid rgba(34,34,34,0.7);
+  .transition();
 }
 
 .search__btn {
+  display: block;
   width: 30px;
   height: 30px;
   background-image: url(../img/icons/magnifying-glass-browser.png);
