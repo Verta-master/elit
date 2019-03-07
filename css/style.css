@@ -452,7 +452,7 @@ h1,
   font-size: 48px;
   font-weight: 700;
 }
-h1,
+h2,
 .title-2 {
   font-size: 30px;
   font-weight: 700;
@@ -1307,7 +1307,6 @@ h3,
 }
 .steps {
   padding-top: 65px;
-  padding-bottom: 100px;
 }
 .steps__list {
   margin: 0;
@@ -1322,7 +1321,7 @@ h3,
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  margin-bottom: 130px;
+  margin-bottom: 40px;
   margin-top: 40px;
 }
 .steps__item {
@@ -1552,7 +1551,7 @@ h3,
 }
 .breadcrumbs {
   padding-top: 35px;
-  padding-bottom: 40px;
+  padding-bottom: 45px;
   letter-spacing: 0.05em;
   line-height: 18px;
   background-color: #f3f4f4;
@@ -1600,16 +1599,16 @@ span.breadcrumbs__link {
   background-image: url(../img/icons/frame.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 500px 450px;
+  background-size: 75% 75%;
 }
 .catalog__item--large .catalog__overlay p {
-  bottom: 140px;
+  bottom: 135px;
 }
 .catalog__item--large .catalog__overlay::after {
   content: "посмотреть";
   position: absolute;
   top: 200px;
-  right: 5px;
+  right: 10px;
   font-size: 18px;
   line-height: 1;
   color: #1c1f21;
@@ -1691,7 +1690,7 @@ span.breadcrumbs__link {
   z-index: 10;
   left: 0;
   right: 0;
-  bottom: 70px;
+  bottom: 65px;
   max-width: 100%;
   margin: 0;
   text-align: center;
@@ -1702,6 +1701,11 @@ span.breadcrumbs__link {
   text-transform: uppercase;
   -webkit-transition: ease-out 0.3s;
   transition: ease-out 0.3s;
+}
+@media (max-width: 1600px) {
+  .catalog__item--large .catalog__overlay::after {
+    right: 2px;
+  }
 }
 @media (max-width: 1500px) {
   .promo__prev {
@@ -1719,6 +1723,12 @@ span.breadcrumbs__link {
   .benefits {
     padding-left: 15px;
     padding-right: 15px;
+  }
+  .catalog__item--large .catalog__overlay::after {
+    right: -10px;
+  }
+  .catalog__overlay p {
+    font-size: 24px;
   }
 }
 @media (max-width: 1229px) {
@@ -1844,6 +1854,12 @@ span.breadcrumbs__link {
   .steps {
     padding-bottom: 50px;
   }
+  .catalog__item--large .catalog__overlay::after {
+    right: -20px;
+  }
+  .catalog__overlay p {
+    font-size: 18px;
+  }
 }
 @media (max-width: 1022px) {
   .options__item:nth-child(3) .options__info p::before,
@@ -1894,6 +1910,34 @@ span.breadcrumbs__link {
   }
   .header__contacts a {
     display: block;
+  }
+  .catalog__item--large .catalog__overlay::after {
+    display: none;
+  }
+  .catalog__item--large .catalog__overlay {
+    background-image: none;
+  }
+  .catalog__item--large .catalog__overlay p {
+    bottom: 65px;
+  }
+  .catalog__overlay p {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .catalog__link {
+    height: 200px;
+  }
+  .catalog__item--large .catalog__link {
+    height: 410px;
+  }
+  .catalog__item {
+    width: 30%;
+  }
+  .catalog__item--large {
+    width: 34%;
+  }
+  .catalog {
+    margin-bottom: 50px;
   }
 }
 @media (max-width: 766px) {
@@ -2061,5 +2105,16 @@ span.breadcrumbs__link {
   .search {
     margin-left: auto;
     margin-top: 10px;
+  }
+  .catalog__item {
+    width: 100%;
+  }
+  .catalog__item--large {
+    width: 100%;
+  }
+  .catalog__link img {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
   }
 }
