@@ -1,3 +1,9 @@
+@media (max-width: 1600px) {
+  .catalog__item--large .catalog__overlay::after {
+    right: 2px;
+  }
+}
+
 @media (max-width: 1500px) {
   .promo__prev {
     left: 10px;
@@ -14,6 +20,12 @@
   .benefits {
     padding-left: 15px;
     padding-right: 15px;
+  }
+  .catalog__item--large .catalog__overlay::after {
+    right: -10px;
+  }
+  .catalog__overlay p {
+    font-size: 24px;
   }
 }
 
@@ -135,6 +147,12 @@
   .steps {
     padding-bottom: 50px;
   }
+  .catalog__item--large .catalog__overlay::after {
+    right: -20px;
+  }
+  .catalog__overlay p {
+    font-size: 18px;
+  }
 }
 
 //------------------------------------
@@ -182,6 +200,34 @@
   }
   .header__contacts a {
     display: block;
+  }
+  .catalog__item--large .catalog__overlay::after {
+    display: none;
+  }
+  .catalog__item--large .catalog__overlay {
+    background-image: none;
+  }
+  .catalog__item--large .catalog__overlay p {
+    bottom: 65px;
+  }
+  .catalog__overlay p {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .catalog__link {
+    height: 200px;
+  }
+  .catalog__item--large .catalog__link {
+    height: 410px;
+  }
+  .catalog__item {
+    width: 30%;
+  }
+  .catalog__item--large {
+    width: 34%;
+  }
+  .catalog {
+    margin-bottom: 50px;
   }
 }
 
@@ -345,5 +391,16 @@
   .search {
     margin-left: auto;
     margin-top: 10px;
+  }
+  .catalog__item {
+    width: 100%;
+  }
+  .catalog__item--large {
+    width: 100%;
+  }
+  .catalog__link img {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
   }
 }
