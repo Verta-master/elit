@@ -121,7 +121,7 @@ gulp.task("build", function(fn) {
   run(
     "clean",
     "copy",
-    "symbols",
+//    "symbols",
     "images",
     "style:production",
     "js:production",

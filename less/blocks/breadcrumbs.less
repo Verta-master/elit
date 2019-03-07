@@ -1,0 +1,25 @@
+.breadcrumbs {
+  padding-top: 35px;
+  padding-bottom: 40px;
+  letter-spacing: 0.05em;
+  line-height: 18px;
+  background-color: #f3f4f4;
+}
+
+a.breadcrumbs__link {
+  &::after {
+    content: "\00bb";
+    color: #1c1f21;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  
+  &:hover,
+  &:active {
+    color: #1c1f21;
+  }
+}
+
+span.breadcrumbs__link {
+  color: #1c1f21;
+}
