@@ -1,5 +1,5 @@
 .steps {
-  padding-top: 70px;
+  padding-top: 65px;
   padding-bottom: 100px;
 }
 
@@ -9,10 +9,12 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 110px;
+  margin-bottom: 130px;
+  margin-top: 40px;
 }
 
 .steps__item {
+  position: relative;
   max-width: 165px;
   display: flex;
   flex-direction: column;
@@ -28,6 +30,22 @@
   
   &:nth-child(2) {
     max-width: 195px;
+  }
+  
+  &::after {
+    content: "";
+    position: absolute;
+    top: 60px;
+    right: -120px;
+    width: 64px;
+    height: 38px;
+    background-image: url(../img/icons/arrows.png);
+    background-repeat: no-repeat;
+    background-size: contain
+  }
+  
+  &:last-child::after {
+    display: none;
   }
 }
 
