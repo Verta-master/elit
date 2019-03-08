@@ -91,6 +91,7 @@
         <ul class="sidebar__list">
           <li class="sidebar__item">
             <a href="#" class="sidebar__link">Перегородки</a>
+            <button type="button" class="sidebar__drop"></button>
             <ul class="sidebar__sublist">
               <li><a href="#">Elit</a></li>
               <li><a href="#">Elegant</a></li>
@@ -101,6 +102,7 @@
           </li>
           <li class="sidebar__item">
             <a href="#" class="sidebar__link">Крашеные двери</a>
+            <button type="button" class="sidebar__drop"></button>
             <ul class="sidebar__sublist">
               <li><a href="#">Link 1</a></li>
               <li><a href="#">Link 2</a></li>
@@ -111,6 +113,7 @@
           </li>
           <li class="sidebar__item">
             <a href="#" class="sidebar__link">Глянцевые двери</a>
+            <button type="button" class="sidebar__drop"></button>
             <ul class="sidebar__sublist">
               <li><a href="#">Link 1</a></li>
               <li><a href="#">Link 2</a></li>
@@ -121,6 +124,7 @@
           </li>
           <li class="sidebar__item">
             <a href="#" class="sidebar__link">Matadoor</a>
+            <button type="button" class="sidebar__drop"></button>
             <ul class="sidebar__sublist">
               <li><a href="#">Link 1</a></li>
               <li><a href="#">Link 2</a></li>
@@ -223,10 +227,9 @@
   
   <!-- Sidebar -->
   <script>
-    $('.sidebar__link').click(function(e) {
-      e.preventDefault();
+    $('.sidebar__drop').click(function() {
       $(this).next().slideToggle();
-      $(this).toggleClass('sidebar__link--open');
+      $(this).toggleClass('sidebar__drop--open');
     });
     if (window.innerWidth < 766) {
       $('.sidebar__btn').click(function() {
