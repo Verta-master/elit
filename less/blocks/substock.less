@@ -10,6 +10,7 @@
   width: 210px;
   margin-right: 20px;
   margin-bottom: 20px;
+  .transition();
   
   &:nth-child(4n) {
     margin-right: 0;
@@ -17,6 +18,9 @@
   
   &:hover,
   &:active {
+    .transition();
+    box-shadow: 0 0 18px 0 rgba(0,0,0,0.1);
+    
     .substock__title {
       color: red;
       .transition();
