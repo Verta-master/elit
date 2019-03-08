@@ -91,7 +91,6 @@
         <ul class="sidebar__list">
           <li class="sidebar__item">
             <a href="#" class="sidebar__link">Перегородки</a>
-            <button type="button" class="sidebar__drop"></button>
             <ul class="sidebar__sublist">
               <li><a href="#">Elit</a></li>
               <li><a href="#">Elegant</a></li>
@@ -102,7 +101,6 @@
           </li>
           <li class="sidebar__item">
             <a href="#" class="sidebar__link">Крашеные двери</a>
-            <button type="button" class="sidebar__drop"></button>
             <ul class="sidebar__sublist">
               <li><a href="#">Link 1</a></li>
               <li><a href="#">Link 2</a></li>
@@ -113,7 +111,6 @@
           </li>
           <li class="sidebar__item">
             <a href="#" class="sidebar__link">Глянцевые двери</a>
-            <button type="button" class="sidebar__drop"></button>
             <ul class="sidebar__sublist">
               <li><a href="#">Link 1</a></li>
               <li><a href="#">Link 2</a></li>
@@ -124,7 +121,6 @@
           </li>
           <li class="sidebar__item">
             <a href="#" class="sidebar__link">Matadoor</a>
-            <button type="button" class="sidebar__drop"></button>
             <ul class="sidebar__sublist">
               <li><a href="#">Link 1</a></li>
               <li><a href="#">Link 2</a></li>
@@ -136,53 +132,45 @@
         </ul>
       </aside>
       <div class="content">
-        <ul class="stock">
-          <li class="stock__item">
-            <a href="#" class="stock__link">
-              <figure class="stock__img">
-                <img src="img/images/img-1.jpg" alt="перегородки">
+        <ul class="substock">
+          <li class="substock__item">
+            <a href="#" class="substock__link">
+              <figure class="substock__img">
+                <img src="img/images/stock-1.jpg" alt="Elite">
               </figure>
-              <div class="stock__title">перегородки</div>
+              <div class="substock__title">Elite</div>
             </a>
           </li>
-          <li class="stock__item">
-            <a href="#" class="stock__link">
-              <figure class="stock__img">
-                <img src="img/images/img-2.jpg" alt="крашеные двери">
+          <li class="substock__item">
+            <a href="#" class="substock__link">
+              <figure class="substock__img">
+                <img src="img/images/stock-2.jpg" alt="Elegant">
               </figure>
-              <div class="stock__title">крашеные двери</div>
+              <div class="substock__title">Elegant</div>
             </a>
           </li>
-          <li class="stock__item">
-            <a href="#" class="stock__link">
-              <figure class="stock__img">
-                <img src="img/images/img-3.jpg" alt="Глянцевые двери">
+          <li class="substock__item">
+            <a href="#" class="substock__link">
+              <figure class="substock__img">
+                <img src="img/images/stock-3.jpg" alt="plano">
               </figure>
-              <div class="stock__title">Глянцевые двери</div>
+              <div class="substock__title">plano</div>
             </a>
           </li>
-          <li class="stock__item">
-            <a href="#" class="stock__link">
-              <figure class="stock__img">
-                <img src="img/images/img-4.jpg" alt="matadoor">
+          <li class="substock__item">
+            <a href="#" class="substock__link">
+              <figure class="substock__img">
+                <img src="img/images/stock-4.jpg" alt="standart">
               </figure>
-              <div class="stock__title">matadoor</div>
+              <div class="substock__title">standart</div>
             </a>
           </li>
-          <li class="stock__item">
-            <a href="#" class="stock__link">
-              <figure class="stock__img">
-                <img src="img/images/img-4.jpg" alt="bonita">
+          <li class="substock__item">
+            <a href="#" class="substock__link">
+              <figure class="substock__img">
+                <img src="img/images/stock-1.jpg" alt="standart">
               </figure>
-              <div class="stock__title">bonita</div>
-            </a>
-          </li>
-          <li class="stock__item">
-            <a href="#" class="stock__link">
-              <figure class="stock__img">
-                <img src="img/images/img-3.jpg" alt="unico doors">
-              </figure>
-              <div class="stock__title">unico doors</div>
+              <div class="substock__title">standart</div>
             </a>
           </li>
         </ul>
@@ -235,9 +223,10 @@
   
   <!-- Sidebar -->
   <script>
-    $('.sidebar__drop').click(function() {
+    $('.sidebar__link').click(function(e) {
+      e.preventDefault();
       $(this).next().slideToggle();
-      $(this).toggleClass('sidebar__drop--open');
+      $(this).toggleClass('sidebar__link--open');
     });
     if (window.innerWidth < 766) {
       $('.sidebar__btn').click(function() {
