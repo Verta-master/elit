@@ -229,6 +229,17 @@
   .catalog {
     margin-bottom: 50px;
   }
+  .stock__img {
+    width: 200px;
+  }
+  .stock__title {
+    width: ~"calc(100% - 200px)";
+    font-size: 20px;
+  }
+  .wrapper--columns {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
 }
 
 //----------------------------------------
@@ -299,6 +310,7 @@
     margin-right: auto;
     margin-bottom: 30px;
   }
+  .content,
   .steps__info {
     width: 100%;
   }
@@ -307,6 +319,16 @@
   }
   .footer__block {
     margin-bottom: 20px;
+  }
+  .wrapper--columns {
+    display: block;
+  }
+  .sidebar {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .sidebar__list {
+    display: none;
   }
 }
 
@@ -392,9 +414,8 @@
     margin-left: auto;
     margin-top: 10px;
   }
-  .catalog__item {
-    width: 100%;
-  }
+  .catalog__item,
+  .stock__title,
   .catalog__item--large {
     width: 100%;
   }
@@ -402,5 +423,19 @@
     width: 100%;
     height: auto;
     min-height: 100%;
+  }
+  .stock__link {
+    flex-direction: column;
+  }
+  .stock__img {
+    width: 100%;
+    
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .stock__title {
+    padding: 20px;
   }
 }
