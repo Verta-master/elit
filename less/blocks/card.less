@@ -1,0 +1,169 @@
+.card {
+  margin-bottom: 50px;
+}
+
+.card__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.card__img {
+  width: 300px;
+  max-width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(243, 244, 244);
+  
+  img {
+    max-height: 100%;
+  }
+}
+
+.card__info {
+  width: ~"calc(100% - 320px)";
+}
+
+.card__colors {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+}
+
+.card__color-btns {
+  margin-left: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.card__check {
+  display: none;
+}
+
+.card__label {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  
+  &::after {
+    display: none;
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: 61px;
+    height: 61px;
+    border: 1px solid rgb(28, 31, 33);
+  }
+}
+
+.card__check:checked + .card__label::after {
+  display: block;
+}
+
+.card__social {
+  margin-bottom: 70px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  
+  span {
+    margin-right: 25px;
+  }
+  
+  .social__item {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-color: #1c1f21;
+  }
+  
+  .social__link {
+    width: 15px;
+    height: 15px;
+    
+    &--vk {
+      background-image: url(../img/icons/vk-dark.svg);
+    }
+    &--fb {
+      background-image: url(../img/icons/facebook-logo-dark.svg);
+    }
+    &--tw {
+      background-image: url(../img/icons/twitter-dark.svg);
+    }
+    &--gp {
+      background-image: url(../img/icons/google-plus-dark.svg);
+    }
+    &--in {
+      background-image: url(../img/icons/instagram-dark.svg);
+    }
+  }
+}
+
+.card__price-btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.card__price {
+  margin: 0;
+  margin-right: 18px;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #1c1f21;
+  letter-spacing: 0.05em;
+}
+
+.card__btn {
+  width: 195px;
+  height: 50px;
+  margin: 10px 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  color: #1c1f21;
+  border: 1px solid rgb(28, 31, 33);
+  border-radius: 25px;
+  .transition();
+  
+  &--buy {
+    width: 155px;
+  }
+  
+  &:hover,
+  &:active {
+    opacity: 0.7;
+    color: #fff;
+    background-color: #1c1f21;
+    .transition();
+  }
+}

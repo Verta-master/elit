@@ -13,6 +13,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  box-sizing: border-box;
   .transition();
   
   &:nth-child(3n) {
@@ -35,6 +36,10 @@
   align-items: center;
   background-color: #f3f4f4;
   overflow: hidden;
+  
+  img {
+    max-height: 100%;
+  }
 }
 
 .product__info {
@@ -122,4 +127,36 @@
     border-color: red;
     .transition();
   }
+}
+
+.product-slider {
+  position: relative;
+  max-width: 895px;
+  
+  .title-2 {
+    text-align: left;
+  }
+}
+
+.product__prev,
+.product__next {
+  width: 54px;
+  height: 54px;
+  border: 1px solid rgb(145, 145, 145);
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  background-image: url(../img/icons/left-arrow.png);
+  background-position: center;
+  background-size: 12px 24px;
+  outline: none;
+  opacity: 1;
+}
+
+.product__prev {
+  left: -27px;
+  transform: rotate(180deg);
+}
+
+.product__next {
+  right: -27px;
 }
